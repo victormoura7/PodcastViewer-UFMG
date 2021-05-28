@@ -10,9 +10,6 @@ TP1 de Engenharia de Software - UFMG 2021/1
 ## Descrição do projeto
 Um sistema que permite registrar e listar os episódios dos podcasts de interesse do usuário, com a possibilidade de marcar os episódios já reproduzidos e escutá-los no próprio aplicativo.
 
-## Componentes
-
-
 ## Tecnologias
 - Front-end com HTML, SCSS, Javascript e Vue.js (Vuex, Vue Router e Vuetify)
 - Back-end com Nest (Node.js)
