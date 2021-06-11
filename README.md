@@ -23,3 +23,9 @@ Um sistema que permite registrar e listar os episódios dos podcasts de interess
 - Visualização de detalhes dos podcasts e dos episódios
 - Reprodução built-in dos episódios
 - Responsividade
+
+## Backlog das histórias
+- https://www.notion.so/315052b0979e4b5bbfb5a30841faeedf?v=bc1adf18312845499e155ed992db1121
+
+## Backlog da sprint
+- https://www.notion.so/192caaab28c14672952707002654af4c?v=6054bf5429cd4de4be35fd04428b80b2
