@@ -1,0 +1,33 @@
+version: '3'
+
+# Here are defined tree containers that will be executed for the application
+services:
+  mongo:
+    image: mongo
+    restart: always
+    volumes:
+      - /var/lib/docker/mongo/mongo.sock:/var/run/mongo/mongo.sock
+      - /var/lib/docker/mongo/data:/var/lib/mongo/data
+    env_file:
+      - .env
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+
+  # Node application container
+  api:
+    links:
+      - mongo
+    env_file:
+      - .env
+
+    # For this container we'll be using a local dockerfile, based on current path "./"
+    build:
+      dockerfile: Dockerfile.prod
+      context: ./
+    depends_on:
+      - mongo
+
+    # Fowarding container port to local machine based on port defined on .env
+    ports:
+      - '${PORT}:${PORT}'
